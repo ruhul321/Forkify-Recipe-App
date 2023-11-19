@@ -125,6 +125,9 @@ const contronAddRecipe = async function (newRecipe) {
   }
 };
 
+const newFeature = function () {
+  console.log('Welcome to the Application.New Featue of applicatio.');
+};
 const init = function () {
   bookmarksView.addhandlerrender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -133,6 +136,6 @@ const init = function () {
   pageinationView.addHandlerClick(controlPagination);
   recipeView.addHandlerUpdateServings(controlServings);
   AddrecipeView.addhandlerUpload(contronAddRecipe);
-  console.log('Welcome !');
+  newFeature();
 };
 init();
