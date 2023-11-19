@@ -13,9 +13,6 @@ import View from './views/View.js';
 
 const recipeContainer = document.querySelector('.recipe');
 
-// https://forkify-api.herokuapp.com/v2
-
-///////////////////////////////////////
 console.log('Forkify');
 
 const controlRecipes = async function () {
@@ -75,7 +72,6 @@ const controlServings = function (newServings) {
   //update the recipe servings (in state)
   model.updateServings(newServings);
   //update the recipe view
-  //recipeView.render(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
 
@@ -125,9 +121,6 @@ const contronAddRecipe = async function (newRecipe) {
   }
 };
 
-const newFeature = function () {
-  console.log('Welcome to the Application.New Featue of applicatio.');
-};
 const init = function () {
   bookmarksView.addhandlerrender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -136,6 +129,5 @@ const init = function () {
   pageinationView.addHandlerClick(controlPagination);
   recipeView.addHandlerUpdateServings(controlServings);
   AddrecipeView.addhandlerUpload(contronAddRecipe);
-  newFeature();
 };
 init();
